@@ -1,11 +1,10 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from '../components/Layout';
 import styles from '../components/products.module.css';
 import Image from 'gatsby-image';
-import { Link } from 'gatsby';
 
-const ComponentName = ({ data }) => {
+const Products = ({ data }) => {
   const { allContentfulProduct: { nodes: products } } = data;
   console.log(products);
 
@@ -40,4 +39,4 @@ export const query = graphql`
   }
 `
 
-export default ComponentName;
+export default Products;
